@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Invoiced
 {
@@ -54,7 +55,7 @@ namespace Invoiced
 		public bool? Taxable { get; set; }
 
 		[JsonProperty("taxes")]
-		public IList<Tax> Taxes { get; set; }
+		public List<object> Taxes { get; set; }
 
 		[JsonProperty("type")]
 		public string Type { get; set; }
